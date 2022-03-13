@@ -41,7 +41,6 @@
 		    <artifactId>tomcat-jasper</artifactId>
 		    <version>9.0.58</version>
 		</dependency>
-		
 	</dependencies>
 
 	<build>
