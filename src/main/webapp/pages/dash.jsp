@@ -59,8 +59,8 @@
                 <span class="hidden-sm-down">Student Registration</span>
                 </a>
                 <div class="collapse" id="menu1">
-                    <a href="dash.jsp" class="list-group-item" data-parent="#menu1">New Registration</a>
-                    <a href="viewRegisteredStudents.jsp" class="list-group-item" data-parent="#menu1">Modify Registration</a>                  
+                    <a href="/" class="list-group-item" data-parent="#menu1">New Registration</a>
+                    <a href="viewStudents" class="list-group-item" data-parent="#menu1">Modify Registration</a>                  
                 </div>
                 
                  <a href="#menu15" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
