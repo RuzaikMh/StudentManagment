@@ -41,6 +41,11 @@
 		    <artifactId>tomcat-jasper</artifactId>
 		    <version>9.0.58</version>
 		</dependency>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
 	</dependencies>
 
 	<build>

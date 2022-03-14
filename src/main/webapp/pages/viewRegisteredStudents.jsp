@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -132,8 +133,29 @@
                           <td>District</td>
                           <td>Action</td>
                       </tr>
-                      
-                           
+                      <c:forEach items="${sList}" var="student">
+                      		<tr>
+                     		  <td>${student.registrationNumber}</td>
+	                          <td>${student.studentName}</td>
+	                          <td>${student.course}</td>
+	                          <td>${student.nic}</td>
+	                          <td>${student.phoneNumber}</td>
+	                          <td>${student.email}</td>
+	                          <td>${student.address}</td>
+	                          <td>${student.date}</td>
+	                          <td>${student.province}</td>
+	                          <td>${student.district}</td>
+	                          <td>
+		                          <div>
+		                          		<a href='updateStudent?update=${student.registrationNumber}' class='btn btn-warning btn-xs'>Update</a>
+		                          </div>
+		                          <br>
+		                          <div>
+		                              <a href='deleteStudent?delete=${student.registrationNumber}' class='btn btn-danger btn-xs'>Delete&nbsp;</a>
+		                          </div>
+                      		</td>
+                      	  </tr>
+                      </c:forEach>     
                   </table>
       </div>
                     <div class="panel-footer" id = "myfooter">&nbsp;</div>
