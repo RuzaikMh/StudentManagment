@@ -62,4 +62,13 @@ public class StudentController {
 		repo.save(student);
 		return viewStudents();
 	}
+	
+	@RequestMapping("/serach")
+	public ModelAndView search(String search)
+	{
+		List<Student> students = repo.findByStudentNameLike(search);
+		ModelAndView mv = new ModelAndView("viewRegisteredStudents");
+		mv.addObject("sList", students);
+		return mv;
+	}
 }
