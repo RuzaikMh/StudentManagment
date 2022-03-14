@@ -47,10 +47,18 @@ public class StudentController {
 		return viewStudents();
 	}
 	
-	@RequestMapping("/updateStudent")
-	public ModelAndView update(String update) 
+	@RequestMapping("/updateStudentPage")
+	public ModelAndView updatePage(String update) 
 	{
+		ModelAndView mv = new ModelAndView("updateStudent");
 		Student student = repo.getById(update);
+		mv.addObject("student", student);
+		return mv;
+	}
+	
+	@RequestMapping("/updateStudent")
+	public ModelAndView updateStudent(Student student)
+	{
 		repo.save(student);
 		return viewStudents();
 	}

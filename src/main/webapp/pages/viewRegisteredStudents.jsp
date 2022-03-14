@@ -147,7 +147,7 @@
 	                          <td>${student.district}</td>
 	                          <td>
 		                          <div>
-		                          		<a href='updateStudent?update=${student.registrationNumber}' class='btn btn-warning btn-xs'>Update</a>
+		                          		<a href='updateStudentPage?update=${student.registrationNumber}' class='btn btn-warning btn-xs'>Update</a>
 		                          </div>
 		                          <br>
 		                          <div>
