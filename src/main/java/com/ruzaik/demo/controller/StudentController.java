@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ruzaik.demo.dao.CourseRepo;
 import com.ruzaik.demo.dao.StudentRepo;
+import com.ruzaik.demo.model.Course;
 import com.ruzaik.demo.model.Student;
 
 @Controller
@@ -16,11 +18,16 @@ public class StudentController {
 	
 	@Autowired
 	StudentRepo repo;
+	@Autowired
+	CourseRepo courseRepo;
 	
 	@RequestMapping("/")
-	public String home()
+	public ModelAndView home()
 	{
-		return "dash";
+		List<Course> coList = courseRepo.findAll();
+		ModelAndView mv = new ModelAndView("dash");
+		mv.addObject("courseList", coList);
+		return mv;
 	}
 	
 	@RequestMapping("/RegisterStudents")
@@ -52,7 +59,9 @@ public class StudentController {
 	{
 		ModelAndView mv = new ModelAndView("updateStudent");
 		Student student = repo.getById(update);
+		List<Course> coList = courseRepo.findAll();
 		mv.addObject("student", student);
+		mv.addObject("courseList", coList);
 		return mv;
 	}
 	

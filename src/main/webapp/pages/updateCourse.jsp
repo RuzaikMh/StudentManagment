@@ -1,8 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <dbootiv class="col-md-10">
-                    <h1><i class="fas fa-user-plus"></i> Student Registration </h1>
+                    <h1><i class="fas fa-chalkboard-teacher"></i> Course Creation </h1>
             </div>
         </div>
         </div>
@@ -64,8 +62,9 @@
                             <span class="hidden-sm-down">Student Registration</span>
                         </a>
                         <div class="collapse" id="menu1">
-                            <a href="/" class="list-group-item" data-parent="#menu1">New Registration</a>
-                            <a href="viewStudents" class="list-group-item" data-parent="#menu1">Modify Registration</a>
+                            <a href="dash.jsp" class="list-group-item" data-parent="#menu1">New Registration</a>
+                            <a href="viewRegisteredStudents.jsp" class="list-group-item" data-parent="#menu1">Modify
+                                Registration</a>
                         </div>
 
                         <a href="#menu15" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
@@ -73,7 +72,8 @@
                             <span class="hidden-sm-down">Course Creation</span>
                         </a>
                         <div class="collapse" id="menu15">
-                            <a href="course" class="list-group-item" data-parent="#menu15">Add Course</a>
+                            <a href="courseCreation.jsp" class="list-group-item" data-parent="#menu15">Add
+                                Course</a>
                             <a href="viewCourse.jsp" class="list-group-item" data-parent="#menu15">Modify Course</a>
                         </div>
 
@@ -107,27 +107,32 @@
 
                     <div class="panel panel-default">
                         <div class="panel-heading main-color-bg">
-                            <h3 class="panel-title">Register Student</h3>
+                            <h3 class="panel-title">Add Course</h3>
                         </div>
                         <div class="panel-body">
-                            <form action="RegisterStudents" method="post">
+                            <form action="updateCourse" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon">
-                                                <lable>Student Name&nbsp;</lable>
+                                                <lable>
+                                                	Course ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </lable>
                                             </span>
-                                            <input name="studentName" type="text" id="text-only" class="form-control"
-                                                aria-label="..." required>
+                                            <input name="courseID" value="${course.courseID}" type="text"
+                                                id="text-only" class="form-control" aria-label="..."
+                                                readonly="readonly">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon">
-                                                <lable>Registration Number</lable>
+                                                <lable>
+                                                    Grade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </lable>
                                             </span>
-                                            <input name="registrationNumber" type="text" class="form-control"
-                                                aria-label="..." required>
+                                            <input name="grade" value="${course.grade}" type="text"
+                                                class="form-control" aria-label="..." required>
                                         </div>
                                     </div>
                                 </div>
@@ -136,99 +141,36 @@
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon">
-                                                <lable>
-                                                    Course&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                </lable>
+                                                <lable>Course Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</lable>
                                             </span>
-                                            <select class="form-control" name="course">
-                                                <option value="" disabled selected>Select Course</option>
-                                                <c:forEach items="${courseList}" var="courses">
-                                                	<option value="${courses.courseName}">${courses.courseName}</option>
-                                                </c:forEach>
-                                            </select>
+                                            <input name="courseName" value="${course.courseName}" type="text"
+                                                class="form-control" aria-label="..." required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <span class="input-group-addon">
-                                                <lable>
-                                                	NIC No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                </lable>
+                                                <lable>Duration In Months</lable>
                                             </span>
-                                            <input name="nic" type="text" class="form-control" aria-label="..."
-                                                required>
+                                            <input name="months" value="${course.months}" type="number"
+                                                class="form-control" aria-label="..." required>
                                         </div>
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="input-group">
                                             <span class="input-group-addon">
-                                                <lable>Phone Number</lable>
+                                                <lable>Lecture In Charge</lable>
                                             </span>
-                                            <input name="phoneNumber" type="text" class="form-control" aria-label="..."
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <lable>
-                                                    Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                </lable>
-                                            </span>
-                                            <input name="email" type="email" class="form-control" aria-label="...">
+                                            <input name="lecture" value="${course.lecture}" type="text"
+                                                class="form-control" aria-label="..." required>
                                         </div>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <lable>Postal Address</lable>
-                                            </span>
-                                            <input name="address" type="text" class="form-control" aria-label="...">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <lable>
-                                                	Joined Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                </lable>
-                                            </span>
-                                            <input name="date" type="date" class="form-control" aria-label="...">
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <lable>
-                                                    Province&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                </lable>
-                                            </span>
-                                            <input name="province" type="text" class="form-control" aria-label="..."
-                                                required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <lable>
-                                                    District&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                </lable>
-                                            </span>
-                                            <input name="district" type="text" class="form-control" aria-label="..."
-                                                required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
+
                                 <div class="row">
                                     <div class="col-md-6" id="save&rest">
                                         <button type="submit" class="btn btn-primary btn-lg btn-block"><span
@@ -240,7 +182,6 @@
 
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                         <div class="panel-footer" id="myfooter">&nbsp;</div>
@@ -250,7 +191,7 @@
         </div>
     </section>
 
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer id="footer">
         <p>© 2021 - SLIIT</p>
     </footer>
