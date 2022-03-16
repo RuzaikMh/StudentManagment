@@ -31,10 +31,10 @@ public class StudentController {
 	}
 	
 	@RequestMapping("/RegisterStudents")
-	public String register(Student student)
+	public ModelAndView register(Student student)
 	{
 		repo.save(student);
-		return "dash";
+		return home();
 	}
 	
 	@RequestMapping("/viewStudents")
