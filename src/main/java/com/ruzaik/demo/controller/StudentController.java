@@ -21,6 +21,12 @@ public class StudentController {
 	CourseRepo courseRepo;
 	
 	@RequestMapping("/")
+	public String welcomePage()
+	{
+		return "welcomePage";
+	}
+	
+	@RequestMapping("/dash")
 	public ModelAndView home()
 	{
 		List<Course> coList = courseRepo.findAll();
