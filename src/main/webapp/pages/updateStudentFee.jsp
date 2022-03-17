@@ -113,7 +113,7 @@
                             <h3 class="panel-title">New Fee</h3>
                         </div>
                         <div class="panel-body">
-                            <form action="addStudentFee" method="post">
+                            <form action="updateStudentFee" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-group">
@@ -121,7 +121,8 @@
                                                 <lable>Registration Number</lable>
                                             </span>
                                             <input name="registrationNumber" type="text" id="text-only"
-                                                class="form-control" list="studentRegistrationNumber" aria-label="..." required>
+                                                class="form-control" list="studentRegistrationNumber"
+                                                value="${studentFee.registrationNumber}" aria-label="..." required>
                                             <datalist id="studentRegistrationNumber">
                                             	<c:forEach items="${students}" var="StudentID">
                                             		<option value="${StudentID.registrationNumber}">
@@ -137,7 +138,7 @@
                                                 </lable>
                                             </span>
                                             <input name="paymentId" type="text" class="form-control" aria-label="..."
-                                                required>
+                                                value="${studentFee.paymentId}" required>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +152,7 @@
                                                 </lable>
                                             </span>
                                             <input name="studentName" type="text" class="form-control" aria-label="..."
-                                                list="studentNameList" required>
+                                                list="studentNameList" value="${studentFee.studentName}" required>
                                             <datalist id="studentNameList">
                                             	<c:forEach items="${students}" var="StudentNAME">
                                             		<option value="${StudentNAME.studentName}">
@@ -165,7 +166,7 @@
                                                 <lable>Payment Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</lable>
                                             </span>
                                             <input name="paymentAmount" type="text" class="form-control"
-                                                aria-label="..." required>
+                                                aria-label="..." value="${studentFee.paymentAmount}" required>
                                         </div>
                                     </div>
                                 </div>
@@ -187,7 +188,7 @@
                                     </div>
                                 </div>
                                 <br>
-
+								<input name="id" value="${studentFee.id}" type="hidden">
                                 <div class="row">
                                     <div class="col-md-6" id="save&rest">
                                         <button type="submit" class="btn btn-primary btn-lg btn-block"><span

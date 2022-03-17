@@ -3,7 +3,6 @@ package com.ruzaik.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.support.Repositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -63,5 +62,14 @@ public class CourseController {
 	{
 		repo.save(course);
 		return viewCourse();
+	}
+	
+	@RequestMapping("/searchCourse")
+	public ModelAndView search(String search)
+	{
+		List<Course> courseList = repo.findByCourseNameLike(search);
+		ModelAndView mv = new ModelAndView("viewCourse");
+		mv.addObject("courseList", courseList);
+		return mv;
 	}
 }

@@ -14,8 +14,6 @@ public class StudentFee {
 	private String paymentAmount;
 	private String studentName;
 	private String purposeOfPayment;
-	private String phoneNumber;
-	private String email;
 	
 	public int getId() {
 		return id;
@@ -53,22 +51,10 @@ public class StudentFee {
 	public void setPurposeOfPayment(String purposeOfPayment) {
 		this.purposeOfPayment = purposeOfPayment;
 	}
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
 	@Override
 	public String toString() {
 		return "StudentFee [id=" + id + ", registrationNumber=" + registrationNumber + ", paymentId=" + paymentId
 				+ ", paymentAmount=" + paymentAmount + ", studentName=" + studentName + ", purposeOfPayment="
-				+ purposeOfPayment + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
+				+ purposeOfPayment + "]";
 	}
 }

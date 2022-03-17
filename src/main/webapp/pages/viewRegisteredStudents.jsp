@@ -110,7 +110,7 @@
                           <h4>Registration Details</h4>
                       </div>
                       <div class="col-md-4">
-                          <form action = "serach" method="get">
+                          <form action = "serachStudent" method="get">
                               <input type="text" class ="form-control" name="search" placeholder="Search By Student Name">
                           </form>
                       </div>

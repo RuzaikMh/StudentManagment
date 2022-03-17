@@ -117,8 +117,8 @@
                                         <h4>Course Details</h4>
                                     </div>
                                     <div class="col-md-4">
-                                        <form action="" method="get">
-                                            <input type="text" class="form-control" name="search" placeholder="search">
+                                        <form action="searchCourse" method="get">
+                                            <input type="text" class="form-control" name="search" placeholder="Search by course name">
                                         </form>
                                     </div>
                                     <div class="col-md-4 text-right">

@@ -117,8 +117,8 @@
                                     <h4>Fees Details</h4>
                                 </div>
                                 <div class="col-md-4">
-                                    <form action="" method="get">
-                                        <input type="text" class="form-control" name="search" placeholder="search">
+                                    <form action="searchFees" method="get">
+                                        <input type="text" class="form-control" name="search" placeholder="Search by student name">
                                     </form>
                                 </div>
                                 <div class="col-md-4 text-right">
@@ -131,10 +131,8 @@
                                     <td>Payment ID</td>
                                     <td>Registration Number</td>
                                     <td>Name</td>
-                                    <td>Phone Number</td>
                                     <td>Payment Amount</td>
                                     <td>Purpose Of payment</td>
-                                    <td>Email</td>
                                     <td>Action</td>
                                 </tr>
                                 <c:forEach items="${studentFees}" var="studentFees">
@@ -149,20 +147,14 @@
                                         ${studentFees.studentName}
                                     </td>
                                     <td>
-                                        ${studentFees.phoneNumber}
-                                    </td>
-                                    <td>
                                         ${studentFees.paymentAmount}
                                     </td>
                                     <td>
                                         ${studentFees.purposeOfPayment}
                                     </td>
                                     <td>
-                                        ${studentFees.email}
-                                    </td>
-                                    <td>
                                         <div>
-                                            <a href='UpdateFee.jsp?update='
+                                            <a href='updateStudentFeePage?id=${studentFees.id}'
                                                 class='btn btn-warning btn-xs'>Update</a>
                                         </div>
                                         <br>

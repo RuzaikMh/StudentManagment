@@ -51,5 +51,30 @@ public class StudentFeeController {
 		repo.deleteById(id);
 		return viewStudentFee();
 	}
+	
+	@RequestMapping("/searchFees")
+	public ModelAndView search(String search)
+	{
+		List<StudentFee> studentFees = repo.findByStudentNameLike(search);
+		ModelAndView mv = new ModelAndView("viewStudentFee");
+		mv.addObject("studentFees", studentFees);
+		return mv;
+	}
+	
+	@RequestMapping("/updateStudentFeePage")
+	public ModelAndView updateStudentFee(int id)
+	{
+		StudentFee studentFee = repo.getById(id);
+		ModelAndView mv = new ModelAndView("updateStudentFee");
+		mv.addObject("studentFee", studentFee);
+		return mv;
+	}
+	
+	@RequestMapping("/updateStudentFee")
+	public ModelAndView updateStudentFee(StudentFee studentFee)
+	{
+		repo.save(studentFee);
+		return viewStudentFee();
+	}
 
 }
