@@ -1,10 +1,12 @@
-# Collage-Admission-Managment-System
-## HCL Traning Project
-Group Memebers
-- Shenuka Ranawaka
-- Ruzaik Ahamed
-- Dinithi Gamage 
-- Kethmini Weerasekara
+# Student Managment System
+This is a spring boot web application for student management. This allows users to maintain student, course, student fee, and attendance records.
+
+Technology used
+- Spring boot
+- Spring boot data jpa
+- JSP
+- Bootstrap
+- PostgreSQL
 
 ## Screenshots
 
