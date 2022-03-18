@@ -20,7 +20,7 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><i class="fas fa-university"></i>  SLIIT</a>
+          <a class="navbar-brand" href="/"><i class="fas fa-university"></i>  SLIIT</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -61,7 +61,7 @@
                 <span class="hidden-sm-down">Student Registration</span>
                 </a>
                 <div class="collapse" id="menu1">
-                    <a href="/" class="list-group-item" data-parent="#menu1">New Registration</a>
+                    <a href="dash" class="list-group-item" data-parent="#menu1">New Registration</a>
                     <a href="viewStudents" class="list-group-item" data-parent="#menu1">Modify Registration</a>                  
                 </div>
                 
@@ -70,8 +70,8 @@
                 <span class="hidden-sm-down">Course Creation</span>
                  </a>
                  <div class="collapse" id="menu15">
-                    <a href="courseCreation.jsp" class="list-group-item" data-parent="#menu15">Add Course</a>
-                    <a href="viewCourse.jsp" class="list-group-item" data-parent="#menu15">Modify Course</a>
+                    <a href="course" class="list-group-item" data-parent="#menu15">Add Course</a>
+                    <a href="viewCourse" class="list-group-item" data-parent="#menu15">Modify Course</a>
                 </div>
                 
                  <a href="#menu10" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
@@ -80,8 +80,8 @@
                  </a>
                 
                 <div class="collapse" id="menu10">
-                    <a href="fees.jsp" class="list-group-item" data-parent="#menu1">New Fee</a>
-                    <a href="viewFees.jsp" class="list-group-item" data-parent="#menu1">Modify Fees</a>
+                    <a href="addStudentFeePage" class="list-group-item" data-parent="#menu1">New Fee</a>
+                    <a href="viewStudentFee" class="list-group-item" data-parent="#menu1">Modify Fees</a>
                 </div>
                 
                  <a href="#menu11" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
@@ -89,8 +89,8 @@
                 <span class="hidden-sm-down">Student Attendance</span>
                  </a>
                 <div class="collapse" id="menu11">
-                    <a href="attendance.jsp" class="list-group-item" data-parent="#menu1">Add Attendance</a>
-                    <a href="viewAttendance.jsp" class="list-group-item" data-parent="#menu11">Modify Attendance</a>
+                    <a href="addAttendancePage" class="list-group-item" data-parent="#menu1">Add Attendance</a>
+                    <a href="viewAttendance" class="list-group-item" data-parent="#menu11">Modify Attendance</a>
                 </div>
                                              
             </div> <!--/copy from here -->
@@ -115,7 +115,7 @@
                           </form>
                       </div>
                       <div class="col-md-4 text-right">
-                          <a href="/" class="btn btn-primary">New Registration</a>
+                          <a href="dash" class="btn btn-primary">New Registration</a>
                       </div>
                   </div>
                   
