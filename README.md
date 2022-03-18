@@ -20,28 +20,28 @@ Technology used
 
 ### View and Modify Students
 
-<img src="https://user-images.githubusercontent.com/43722260/147650417-a2ff8056-111b-46ff-9f9f-2bb9199818aa.png" width="1000">
+<img src="https://user-images.githubusercontent.com/43722260/159079951-48d2b211-4a87-4761-914e-7c18e47f8cb0.JPG" width="1000">
 
 ### Course Creation
 
 <img src="https://user-images.githubusercontent.com/43722260/147650492-162403c7-f2ab-4afc-be3b-2f063eecec8a.png" width="1000">
 
-### Modify Course
+### View and Modify Course
 
-<img src="https://user-images.githubusercontent.com/43722260/147650560-7bf36a00-ee88-4098-9339-c357924e6e56.png" width="1000">
+<img src="https://user-images.githubusercontent.com/43722260/159080173-5e90f8f4-f90f-4723-a61c-05dcc7a19145.JPG" width="1000">
 
 ### Student Fees
 
-<img src="https://user-images.githubusercontent.com/43722260/147650674-128498b4-7b2e-4c77-aa4f-73b93998d675.png" width="1000">
+<img src="https://user-images.githubusercontent.com/43722260/159080246-4b6dc498-43f1-473d-bcf6-85556e0338d0.JPG" width="1000">
 
-### Modify Fees
+### View and Modify Fees
 
-<img src="https://user-images.githubusercontent.com/43722260/147650729-eb7de64a-39f1-4963-8c92-19c45089324b.png" width="1000">
+<img src="https://user-images.githubusercontent.com/43722260/159080331-ab9807dd-b8db-43bc-81f7-3b907bf486fb.JPG" width="1000">
 
 ### Student Attendance
 
-<img src="https://user-images.githubusercontent.com/43722260/147650767-b56f7b35-de5c-4b17-b1dd-4aff12a3602e.png" width="1000">
+<img src="https://user-images.githubusercontent.com/43722260/159080399-f8245047-3642-4bba-81a1-0f7fb7da6992.JPG" width="1000">
 
-### Modify Attendance
+### View and Modify Attendance
 
-<img src="https://user-images.githubusercontent.com/43722260/147650880-f4c6a27c-43be-446c-ae78-ae07a6070b26.png" width="1000">
+<img src="https://user-images.githubusercontent.com/43722260/159080444-c991961d-fb55-4e80-8636-e424f562b771.JPG" width="1000">
