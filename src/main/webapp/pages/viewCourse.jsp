@@ -122,7 +122,7 @@
                                         </form>
                                     </div>
                                     <div class="col-md-4 text-right">
-                                        <a href="addStudentFeePage" class="btn btn-primary">New Course</a>
+                                        <a href="course" class="btn btn-primary">New Course</a>
                                     </div>
                                 </div>
 
